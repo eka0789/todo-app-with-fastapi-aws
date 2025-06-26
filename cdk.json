@@ -1,0 +1,27 @@
+{
+  "app": "make clean && make install && python3 cdk/app.py",
+  "context": {
+    "main_resources_name": "fastapi-todo-app",
+    "tags": {
+      "Owner": "Eka Prasetyo",
+      "Source": "https://github.com/eka0789/todo-app-fastapi-aws",
+      "Description": "A serverless TODO application using FastAPI, AWS Lambda, and API Gateway"
+    },
+    "app_config": {
+      "dev": {
+        "deployment_environment": "dev",
+        "log_level": "DEBUG",
+        "table_name": "todo-app-table-dev",
+        "api_gw_name": "todo-api-dev",
+        "auth": "api_key"
+      },
+      "prod": {
+        "deployment_environment": "prod",
+        "log_level": "INFO",
+        "table_name": "todo-app-table-prod",
+        "api_gw_name": "todo-api-prod",
+        "auth": "cognito"
+      }
+    }
+  }
+}

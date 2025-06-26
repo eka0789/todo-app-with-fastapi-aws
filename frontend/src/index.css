@@ -1,0 +1,118 @@
+:root {
+  --primary: #646cff;
+  --primary-hover: #535bf2;
+  --background: #18181b;
+  --surface: #242424;
+  --text: #f3f4f6;
+  --muted: #a1a1aa;
+  --border: #31313a;
+  --radius: 10px;
+
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: dark;
+  color: var(--text);
+  background-color: var(--background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+  border-bottom: 1px dashed var(--primary-hover);
+}
+a:hover {
+  color: var(--primary-hover);
+  border-bottom: 1px solid var(--primary-hover);
+}
+
+h1 {
+  font-size: 2.8em;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+  letter-spacing: -1px;
+  font-weight: 700;
+  color: var(--primary);
+  text-shadow: 0 2px 16px rgba(100,108,255,0.08);
+}
+
+button {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 0.7em 1.5em;
+  font-size: 1.05em;
+  font-weight: 600;
+  font-family: inherit;
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: 
+    border-color 0.25s,
+    background 0.25s,
+    color 0.25s,
+    box-shadow 0.2s;
+}
+button:hover {
+  border-color: var(--primary);
+  background: linear-gradient(90deg, #2a2a72 0%, #009ffd 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(100,108,255,0.12);
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+input, textarea {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.7em 1em;
+  font-size: 1em;
+  margin-bottom: 1em;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus, textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(100,108,255,0.15);
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+  body {
+    padding: 1em;
+  }
+}
